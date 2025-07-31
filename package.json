@@ -2,7 +2,7 @@
   "name": "node-starter",
   "private": true,
   "scripts": {
-    "dev": "node server.js"
+    "dev": "node api/index.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
