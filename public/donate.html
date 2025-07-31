@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Blood - BloodConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="index.html">🩸 BloodConnect</a></h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="find-donors.html" class="nav-link">Find Donors</a>
+                <a href="make-request.html" class="nav-link">Make Request</a>
+                <a href="donate.html" class="nav-link active">Donate Blood</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-main">
+        <div class="container">
+            <div class="page-header">
+                <h1>Become a Blood Donor</h1>
+                <p>Register as a donor and help save lives in your community</p>
+            </div>
+
+            <div class="donate-section">
+                <div class="requirements-card">
+                    <h3>Donation Requirements</h3>
+                    <div id="requirements-content" class="requirements-content">
+                        <div class="loading">Loading requirements...</div>
+                    </div>
+                </div>
+
+                <div class="donate-card">
+                    <h3>Register as Donor</h3>
+                    <div id="auth-message" class="auth-message">
+                        <p>Please <a href="login.html">login</a> or <a href="signup.html">sign up</a> to register as a donor.</p>
+                    </div>
+                    
+                    <form id="donate-form" class="donate-form" style="display: none;">
+                        <div class="form-group">
+                            <label for="last-donation">Last Donation Date (optional)</label>
+                            <input type="date" id="last-donation" name="lastDonation">
+                            <small>Leave blank if this is your first donation</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="emergency-available" name="availableForEmergency">
+                                Available for emergency situations
+                            </label>
+                            <small>Check this if you can be contacted for urgent blood needs</small>
+                        </div>
+
+                        <div class="health-checklist">
+                            <h4>Health Checklist</h4>
+                            <p>Please confirm the following before registering:</p>
+                            <label><input type="checkbox" required> I am in good health</label>
+                            <label><input type="checkbox" required> I have not donated blood in the last 56 days</label>
+                            <label><input type="checkbox" required> I do not have any infectious diseases</label>
+                            <label><input type="checkbox" required> I have had adequate sleep and nutrition</label>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-full">Register as Donor</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="donation-process">
+                <h3>The Donation Process</h3>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Registration</h4>
+                        <p>Fill out the donor registration form and health questionnaire</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Health Screening</h4>
+                        <p>Brief medical examination and blood pressure check</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Donation</h4>
+                        <p>The actual donation process takes about 10-15 minutes</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4>Recovery</h4>
+                        <p>Rest and refreshments to help your body recover</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="donate.js"></script>
+</body>
+</html>

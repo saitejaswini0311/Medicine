@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloodConnect - Save Lives Together</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🩸 BloodConnect</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="find-donors.html" class="nav-link">Find Donors</a>
+                <a href="make-request.html" class="nav-link">Make Request</a>
+                <a href="donate.html" class="nav-link">Donate Blood</a>
+                <div class="auth-buttons" id="auth-buttons">
+                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="signup.html" class="btn-primary">Sign Up</a>
+                </div>
+                <div class="user-menu" id="user-menu" style="display: none;">
+                    <span id="user-name"></span>
+                    <button onclick="logout()" class="btn-secondary">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Save Lives with Every Drop</h1>
+                <p>Connect blood donors with those in need. Join our community and make a difference today.</p>
+                <div class="hero-buttons">
+                    <a href="find-donors.html" class="btn-primary">Find Donors</a>
+                    <a href="donate.html" class="btn-secondary">Become a Donor</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3 id="donor-count">0</h3>
+                    <p>Active Donors</p>
+                </div>
+                <div class="stat">
+                    <h3 id="request-count">0</h3>
+                    <p>Pending Requests</p>
+                </div>
+                <div class="stat">
+                    <h3>24/7</h3>
+                    <p>Emergency Support</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>How BloodConnect Works</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>Find Donors</h3>
+                        <p>Search for blood donors by blood group and location. Connect with them instantly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3>Make Requests</h3>
+                        <p>Submit blood or medicine requests with urgency levels and get quick responses.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">❤️</div>
+                        <h3>Donate Blood</h3>
+                        <p>Register as a donor and help save lives. Track your donation history.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚨</div>
+                        <h3>Emergency Support</h3>
+                        <p>Get immediate help during medical emergencies with our priority system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blood-groups">
+            <div class="container">
+                <h2>Blood Group Compatibility</h2>
+                <div class="compatibility-chart">
+                    <div class="blood-group">
+                        <h4>A+</h4>
+                        <p>Can donate to: A+, AB+</p>
+                        <p>Can receive from: A+, A-, O+, O-</p>
+                    </div>
+                    <div class="blood-group">
+                        <h4>A-</h4>
+                        <p>Can donate to: A+, A-, AB+, AB-</p>
+                        <p>Can receive from: A-, O-</p>
+                    </div>
+                    <div class="blood-group">
+                        <h4>B+</h4>
+                        <p>Can donate to: B+, AB+</p>
+                        <p>Can receive from: B+, B-, O+, O-</p>
+                    </div>
+                    <div class="blood-group">
+                        <h4>B-</h4>
+                        <p>Can donate to: B+, B-, AB+, AB-</p>
+                        <p>Can receive from: B-, O-</p>
+                    </div>
+                    <div class="blood-group">
+                        <h4>AB+</h4>
+                        <p>Can donate to: AB+</p>
+                        <p>Can receive from: All blood types</p>
+                    </div>
+                    <div class="blood-group">
+                        <h4>AB-</h4>
+                        <p>Can donate to: AB+, AB-</p>
+                        <p>Can receive from: A-, B-, AB-, O-</p>
+                    </div>
+                    <div class="blood-group">
+                        <h4>O+</h4>
+                        <p>Can donate to: A+, B+, AB+, O+</p>
+                        <p>Can receive from: O+, O-</p>
+                    </div>
+                    <div class="blood-group universal">
+                        <h4>O-</h4>
+                        <p>Can donate to: All blood types</p>
+                        <p>Can receive from: O-</p>
+                        <span class="badge">Universal Donor</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BloodConnect</h3>
+                    <p>Connecting hearts, saving lives through blood donation.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="find-donors.html">Find Donors</a></li>
+                        <li><a href="make-request.html">Make Request</a></li>
+                        <li><a href="donate.html">Donate Blood</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergency</h4>
+                    <p>24/7 Support: <strong>911</strong></p>
+                    <p>Blood Bank: <strong>1-800-BLOOD</strong></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BloodConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

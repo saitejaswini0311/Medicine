@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Donors - BloodConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="index.html">🩸 BloodConnect</a></h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="find-donors.html" class="nav-link active">Find Donors</a>
+                <a href="make-request.html" class="nav-link">Make Request</a>
+                <a href="donate.html" class="nav-link">Donate Blood</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-main">
+        <div class="container">
+            <div class="page-header">
+                <h1>Find Blood Donors</h1>
+                <p>Search for available blood donors in your area</p>
+            </div>
+
+            <div class="search-section">
+                <div class="search-card">
+                    <h3>Search Filters</h3>
+                    <div class="search-form">
+                        <div class="form-group">
+                            <label for="blood-group-filter">Blood Group</label>
+                            <select id="blood-group-filter">
+                                <option value="">All Blood Groups</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="emergency-only"> Emergency Available Only
+                            </label>
+                        </div>
+                        <button onclick="searchDonors()" class="btn-primary">Search Donors</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="donors-section">
+                <div class="section-header">
+                    <h3>Available Donors</h3>
+                    <div class="donor-count">
+                        <span id="total-donors">0</span> donors found
+                    </div>
+                </div>
+                
+                <div id="donors-list" class="donors-grid">
+                    <div class="loading">Loading donors...</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="donors.js"></script>
+</body>
+</html>

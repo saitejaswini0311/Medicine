@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Request - BloodConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="index.html">🩸 BloodConnect</a></h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="find-donors.html" class="nav-link">Find Donors</a>
+                <a href="make-request.html" class="nav-link active">Make Request</a>
+                <a href="donate.html" class="nav-link">Donate Blood</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-main">
+        <div class="container">
+            <div class="page-header">
+                <h1>Make a Request</h1>
+                <p>Submit a blood or medicine request to get help from our community</p>
+            </div>
+
+            <div class="request-section">
+                <div class="request-card">
+                    <form id="request-form" class="request-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="requester-name">Requester Name *</label>
+                                <input type="text" id="requester-name" name="requesterName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-info">Contact Information *</label>
+                                <input type="text" id="contact-info" name="contactInfo" placeholder="Phone number or email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="required-item">Required Item *</label>
+                                <select id="required-item" name="requiredItem" onchange="toggleItemFields()" required>
+                                    <option value="">Select Item Type</option>
+                                    <option value="blood">Blood</option>
+                                    <option value="medicine">Medicine</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="urgency-level">Urgency Level *</label>
+                                <select id="urgency-level" name="urgencyLevel" required>
+                                    <option value="">Select Urgency</option>
+                                    <option value="low">Low - Within a week</option>
+                                    <option value="medium">Medium - Within 2-3 days</option>
+                                    <option value="high">High - Within 24 hours</option>
+                                    <option value="critical">Critical - Immediate</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="blood-fields" class="conditional-fields" style="display: none;">
+                            <div class="form-group">
+                                <label for="blood-group">Required Blood Group *</label>
+                                <select id="blood-group" name="bloodGroup">
+                                    <option value="">Select Blood Group</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="medicine-fields" class="conditional-fields" style="display: none;">
+                            <div class="form-group">
+                                <label for="medicine-details">Medicine Details *</label>
+                                <textarea id="medicine-details" name="medicineDetails" placeholder="Specify medicine name, dosage, quantity needed" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Location *</label>
+                            <input type="text" id="location" name="location" placeholder="City, State or specific address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="additional-details">Additional Details</label>
+                            <textarea id="additional-details" name="additionalDetails" placeholder="Any additional information that might be helpful" rows="4"></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary btn-full">Submit Request</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="info-card">
+                    <h3>Request Guidelines</h3>
+                    <ul>
+                        <li><strong>Emergency Cases:</strong> For critical situations, also call emergency services (911)</li>
+                        <li><strong>Contact Info:</strong> Provide accurate contact information for donors to reach you</li>
+                        <li><strong>Location:</strong> Be specific about your location to help nearby donors</li>
+                        <li><strong>Blood Requests:</strong> Include patient's blood group and any special requirements</li>
+                        <li><strong>Medicine Requests:</strong> Specify exact medicine name, dosage, and quantity needed</li>
+                        <li><strong>Response Time:</strong> Expect responses within hours for urgent requests</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="recent-requests">
+                <h3>Recent Community Requests</h3>
+                <div id="recent-requests-list" class="requests-grid">
+                    <div class="loading">Loading recent requests...</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="requests.js"></script>
+</body>
+</html>
